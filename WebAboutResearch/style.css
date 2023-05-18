@@ -1,0 +1,143 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top {
+  background-color: transparent;
+}
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top a {
+  color: white;
+  transition: 0.3s;
+}
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top a:hover {
+  color: #0514a1;
+}
+
+nav.navbar {
+  transition: 0.5s;
+}
+
+header.jumbotron {
+  text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1530053969600-caed2596d242?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+header.jumbotron .container {
+  color: white;
+  padding: 220px 30px 102px 30px;
+}
+header.jumbotron hr {
+  max-width: 80px;
+  border: solid 2px #156cbd;
+}
+header.jumbotron h2 {
+  margin-bottom: 30px;
+}
+header.jumbotron h3 {
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+section {
+  padding: 50px 0px;
+}
+
+section#section_ask {
+  background-color: #d9d7d7;
+}
+section#section_ask .col-sm-5.img {
+  height: 220px;
+  background-image: url(https://images.thefishsite.com/fish/legacy/files/articles/old/09-11-30Faoorgfisher.gif);
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+section#section_ask h2 {
+  margin-top: 100px;
+  padding: 0px 50px;
+}
+
+section#section_about .img_wrap {
+  height: 240px;
+  overflow: hidden;
+}
+section#section_about img {
+  width: 120%;
+  margin-left: -35px;
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  section#section_about img {
+    width: 110%;
+  }
+  section#section_about .img_wrap {
+    height: 440px;
+  }
+}
+@media (min-width: 500px) and (max-width: 600px) {
+  section#section_about img {
+    width: 110%;
+  }
+  section#section_about .img_wrap {
+    height: 350px;
+  }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  section#section_about .img_wrap {
+    height: 300px;
+  }
+}
+section#section_story {
+  background-color: #000;
+  color: white;
+  padding: 0px;
+}
+section#section_story .col-sm-5 {
+  background-image: url(https://thumbs.dreamstime.com/b/%E4%B8%9C%E4%BA%9A%E5%9C%B0%E5%9B%BE-%E2%80%94-%E6%B7%B1%E8%89%B2%E8%83%8C%E6%99%AF%E4%B8%AD%E7%9A%84%E7%81%B0%E8%89%B2-%E4%B8%9C%E9%83%A8%E5%9C%B0%E5%8C%BA%E4%B8%8E%E5%9B%BD%E5%AE%B6%E3%80%81%E8%B5%84%E6%9C%AC%E7%9A%84%E9%AB%98%E5%BA%A6%E8%AF%A6%E7%BB%86%E6%94%BF%E6%B2%BB%E5%9C%B0%E5%9B%BE-169987816.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: -15px -35px;
+  height: 440px;
+}
+section#section_story .col-sm-7 {
+  text-align: center;
+}
+section#section_story .col-sm-12.features {
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+section#section_story .col-sm-12.features .col-sm-4 {
+  padding: 0 40px;
+}
+
+footer.jumbotron {
+  text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1530053969600-caed2596d242?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+footer.jumbotron .container {
+  color: white;
+  padding: 40px 30px 40px 30px;
+}
+footer.jumbotron input {
+  background-color: rgba(255, 255, 255, 0.6);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+footer.jumbotron hr {
+  max-width: 80px;
+  border: solid 2px #156cbd;
+}
+footer.jumbotron h2 {
+  margin-bottom: 30px;
+}
