@@ -128,21 +128,16 @@ footer.jumbotron {
   background-attachment: fixed;
   margin-bottom: 0px;
 }
-footer.jumbotron .container {
-  color: white;
+footer.jumbotron .container {  
   padding: 40px 30px 40px 30px;
 }
-footer.jumbotron input {
-  background-color: rgba(255, 255, 255, 0.6);
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
+
 footer.jumbotron hr {
   max-width: 80px;
   border: solid 2px #156cbd;
+  margin-bottom: 60px;
 }
 footer.jumbotron h2 {
   margin-bottom: 30px;
+  color: white;
 }
