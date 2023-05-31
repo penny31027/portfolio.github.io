@@ -123,6 +123,9 @@ section#section_story .col-sm-12.features {
 section#section_story .col-sm-12.features .col-sm-4 {
   padding: 0 40px;
 }
+section#section_story .col-sm-7 p {
+  font-size: 18px;
+}
 
 footer.jumbotron {
   text-align: center;
