@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+/*   border: solid 1px white; */
+  font-family: 微軟正黑體;
+  user-select: none;
+}
+
+.screen {
+  width: 100%;
+  height: 800px;
+}
+.calculator {
+  width: 350px;
+  height: 600px;
+  background-color: black;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.top {
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.top #zero {
+  font-size: 65px;
+  font-weight: lighter;
+  color: white;
+  position: absolute;  
+  right: 30px;
+  bottom: -5px;
+}
+.bottom {
+  width: 100%;
+  height: 70%;
+  font-size: 35px;
+  color: white;
+}
+table {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  border-spacing: 15px;
+}
+
+td { 
+  border-radius: 100%;
+  width: 25%;
+  background-color: #3f3f3f;
+  cursor: pointer;
+}
+td.grey {
+  background-color: grey;
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+}  
+td.yellow {
+  background-color: orange;
+  color: white;
+  font-size: 42px;
+  font-weight: bold;
+}
+td.nzero {
+  padding: 0px 25px;
+  border-radius: 30px 30px 30px 30px; 
+  text-align: left;
+  
+}
+td.yellowClicked {
+  background-color: white;
+  color: orange;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="screen">
+        <div class="calculator">
+          <div class="top">
+            <div id="zero">0</div>
+          </div>
+          <div class="bottom">
+            <table>
+              <tr>
+                <td class="grey" onclick="del()">AC</td>
+                <td class="grey" onclick="negative()">+/-</td>
+                <td class="grey" onclick="percent()">%</td>
+                <td class="yellow" onclick="calfunc(this)">÷</td>
+              </tr>
+              <tr>
+                <td class="num" onclick="shownum(this)">7</td>
+                <td class="num" onclick="shownum(this)">8</td>
+                <td class="num" onclick="shownum(this)">9</td>
+                <td class="yellow" onclick="calfunc(this)">×</td>
+              </tr>
+              <tr>
+                <td class="num" onclick="shownum(this)">4</td>
+                <td class="num" onclick="shownum(this)">5</td>
+                <td class="num" onclick="shownum(this)">6</td>
+                <td class="yellow" onclick="calfunc(this)">-</td>
+              </tr>
+              <tr>
+                <td class="num" onclick="shownum(this)">1</td>
+                <td class="num" onclick="shownum(this)">2</td>
+                <td class="num" onclick="shownum(this)">3</td>
+                <td class="yellow" onclick="calfunc(this)">+</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="nzero" onclick="shownum(this)">0</td>         
+                <td class="num" onclick="showdot(this)">.</td>
+                <td class="yellow" onclick="calfunc(this)">=</td>
+              </tr>
+            </table>
+          </div>
+        </div>  
+      </div>
+</body>
+<script>
+    const content = document.getElementById("zero"); //顯示數字div，初始為零
+
+function shownum(num){
+    operator.forEach(element => {
+        element.classList.remove('yellowClicked');
+    });  
+  if (content.innerHTML=="0"){
+    content.innerHTML="";
+  }
+  content.innerHTML+=num.innerHTML;
+}
+function showdot(num){ 
+    operator.forEach(element => {
+        element.classList.remove('yellowClicked');
+    });
+  let contentVal = content.innerHTML;
+  if (contentVal.indexOf(".")<0) {
+    content.innerHTML+=num.innerHTML;
+  }
+  else {
+    content.innerHTML=content.innerHTML;
+  }      
+}
+
+let pendingArray=[]; //運算過程的式子
+const operator = document.querySelectorAll(".yellow"); //運算子
+
+function calfunc(sign){ 
+  const signChange = {
+    "+":"+",
+    "-":"-",
+    "÷":"/",
+    "×":"*"
+    } 
+  // console.log(signChange)
+  const aa = Number(content.innerHTML);
+  operator.forEach(element => {
+    element.classList.remove('yellowClicked');
+  });
+  sign.classList.add("yellowClicked")
+  
+  
+  if (sign.innerHTML=="=") {
+    pendingArray.push(aa)
+    // pendingArray.push('=')
+    console.log(pendingArray)
+    const evaluation = eval(pendingArray.join(' '))
+    console.log(evaluation)
+    content.innerHTML=evaluation;
+    pendingArray=[];//沒有加這行的話，無法在按"="之後的數字結果，再度進行四則運算"+ - * /"
+  }
+  else {
+    content.innerHTML="0";
+    pendingArray.push(aa);
+    console.log(pendingArray);
+    // pendingArray.push(signChange[`${sign.innerHTML}`])     
+    pendingArray.push(signChange[sign.innerHTML]) 
+    console.log(pendingArray)
+  }
+  
+}
+
+
+
+function del(){
+  content.innerHTML="0";
+  pendingArray=[];
+}
+function negative(){
+  let contentVal = content.innerHTML;
+  if (content.innerHTML[0]=="-"){
+    content.innerHTML=contentVal.slice(1);
+  }
+  else {
+    content.innerHTML = "-"+content.innerHTML;
+  } 
+}
+function percent(){
+  let contentNum = Number(content.innerHTML)/10;  //*10 /100
+  content.innerHTML=String(contentNum /10);
+  // content.innerHTML = String(Number(content.innerHTML)*0.01);
+}
+//無法克服Javascript浮點數計算問題(小數點計算最多至1e-7)
+
+
+
+//ref:https://ithelp.ithome.com.tw/articles/10255209
+
+
+</script>
+</html>
