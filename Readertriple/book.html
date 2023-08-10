@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>雙週更｜書評</title>
+    <style>
+        :root {
+            --color-brown: #B27B5D;
+            --color-brown-light: #CC9A7E;
+            --color-brown-lightest: #E5BCA5;
+
+            --color-khaki: #C4A580;
+            --color-khaki-light: #DEC4A6;
+            --color-khaki-lightest: #f8e7d3;
+            --color-khaki-dark: #AB875E;
+
+            --color-orange: #EDAC55;
+            --color-orange-light: #FFC475;
+            --color-orange-lightest: #FFCF8F;
+
+            --color-red: #BC4F4F;
+            --color-red-light: #D66F6F;
+            --color-red-lightest: #F09595;           
+        }
+
+        * {
+            border: solid 1px black;
+            font-family: 微軟正黑體;
+        }
+        html, body {
+            margin: 0;
+            font-size: 0px;
+        }
+        h1, h2, h3, h4 {
+            letter-spacing: 1px;
+        }
+        h2 {font-size: 24px;}
+        h3 {font-size: 18px;}
+        h4 {font-size: 14px;}
+        .container {
+            padding: 50px 100px;
+        }
+        /* ---nav--- */
+        nav {
+            background-color: var(--color-khaki-lightest);
+            border-bottom: solid 1px var(--color-brown-light);
+        }
+        nav ul {
+            text-align: right;
+            margin: 0;
+            padding: 0px 50px;
+            position: relative;
+        }
+        nav li {
+            display: inline-block;
+            text-align: center;
+            width: 250px;            
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            padding: 13px 50px;
+            &:hover {
+                color: white;
+                background-color: var(--color-brown-light);
+            }            
+        }        
+        nav .LOGO_row {
+            display: inline-block;
+            position: absolute;
+            left: 100px;
+            top: -5px;
+        }
+        nav img {
+            height: 60px;
+        }
+        /* ---section--- */
+        #intro .flavor {
+            /* display: inline-block; */
+            & h2, h4 {
+                display: inline-block;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <div class="LOGO_row">
+                <img src="header_pics/LOGO_row.svg" alt="">
+            </div>  
+            <li>雙週更｜書評</li>
+            <li>22號加菜日｜主題</li>
+            <li>七號廚師上新菜｜圖書館新書</li>
+        </ul>
+    </nav>
+    <section id="intro">
+        <div class="container">
+            <h3>帶你用各式視角閱讀書中的酸甜苦辣鹹...</h3>
+            <div class="flavor">
+                <h2>酸</h2>
+                <h4>心酸、愧疚、惋惜</h4>
+            </div>
+            <div class="flavor">
+                <h2>甜</h2>
+                <h4>滿足、幸福、感動</h4>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
