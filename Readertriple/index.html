@@ -4,26 +4,26 @@
     <meta charset="UTF-8" />
     <!-- CSS style -->
     <link rel="stylesheet" href="style.css">
+    <!-- AOS-Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        
 
     <title>仨仁無菜單書店 - @reader.triple</title>
 
     <style>
 
 
-
-
     </style>
 </head>
 <body>
     <nav>
-        <!-- <div class="container"> -->
-        <ul>
+        <ul>            
             <li>雙週更｜書評</li>
             <li>22號加菜日｜主題</li>
             <li>七號廚師上新菜｜圖書館新書</li>
         </ul>
-            
-        <!-- </div> -->
+
     </nav>
     
     <header id="header_all" style="background-color: #f8e7d3;">
@@ -33,36 +33,31 @@
         </div>
         <div id="PIC2">
             <img src="header_pics/reader_triple_khaki_center.jpg" alt="" class="photo" id="PHOTO">
-        </div>
-        
-        
-            
-        
-        
-        
-        
+        </div> 
         
 
         <header id="header_pre">
             <div class="container">
-                <!-- <img src="header_pics/LOGO.svg" alt="" class="logo" id="LOGO"> -->
-                <!-- <img src="header_pics/reader_triple_khaki.jpg" alt="" class="photo" id="PHOTO"> -->
-                <img src="header_pics/arrow_explore.svg" alt="" class="arrow"> 
-                <!-- arrow can link to #header_index -->
+                <div class="arrows">
+                    <img src="header_pics/arrow1.svg" alt="" class="arrow arrow1">
+                    <img src="header_pics/arrow2.svg" alt="" class="arrow arrow2">
+                    <img src="header_pics/arrow3.svg" alt="" class="arrow arrow3">
+                </div>                
+
             </div>
         </header>
 
         <header id="header_index">
             <div class="container">
-                <!-- <img src="header_pics/LOGO.svg" alt="" class="logo"> -->
-                <!-- <img src="header_pics/reader_triple_khaki_center.jpg" alt="" class="photo"> -->
-                <div class="text">
+                <div class="text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" 
+                        data-aos-duration="1000" data-aos-offset="500">
                     <h3 class="intro">三雙眼睛｜三種職業｜三個領域
-                        <br>帶你用各式視角閱讀書中的酸甜苦辣鹹</h3>
-                    <h4 class="hashtags">#風味評分比</h4>
+                        <br>帶你用各式視角閱讀書中的酸甜苦辣鹹
+                        <br>立志要挖掘更多值得翻閱的好書分享給大家</h3>
+                    <!-- <h4 class="hashtags">#風味評分比</h4>
                     <h4 class="hashtags">#雙週更</h4>
                     <h4 class="hashtags">#22號加菜日</h4>
-                    <h4 class="hashtags">#七號廚師上新菜</h4>
+                    <h4 class="hashtags">#七號廚師上新菜</h4> -->
                 </div>                       
             </div>
         </header>
@@ -93,9 +88,11 @@
             </div>
             
             <div class="title">
-                <h1>雙週更｜書評</h1>
+                <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" 
+                    data-aos-duration="1000" data-aos-offset="500">雙週更｜書評</h1>
             </div>
-            <div class="pics pics_left">
+            <div class="pics pics_left" data-aos="fade-left" data-aos-anchor-placement="top-bottom"
+                    data-aos-duration="1000" data-aos-offset="500">
                 <div class="block_L">
                     <div class="content">
                         <h2 class="text">簡介文字 文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容</h2>
@@ -146,9 +143,11 @@
             </div>
 
             <div class="title">
-                <h1>22號加菜日｜主題</h1>
+                <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" 
+                data-aos-duration="1000" data-aos-offset="500">22號加菜日｜主題</h1>
             </div>
-            <div class="pics pics_right">
+            <div class="pics pics_right" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1000" data-aos-offset="500">
                 <div class="block_L">
                     <div class="content">
                         <h2 class="text">簡介文字 文字內容文字內容文字內容文字內容文字內容文字內容文字內容文字內容</h2>
@@ -194,9 +193,11 @@
     <section id="section_newbook">
         <div class="container">
             <div class="title">
-                <h1>七號廚師上新菜｜圖書館新書</h1>
+                <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" 
+                data-aos-duration="1000" data-aos-offset="500">七號廚師上新菜｜圖書館新書</h1>
             </div>
-            <div class="pics pics_center">
+            <div class="pics pics_center" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1000" data-aos-offset="500">
                 <div class="block_L">
                     <div class="content">
                         <h3 class="text">#書籍類別1<br>#書籍類別2<br>#謝編</h3>
@@ -226,8 +227,11 @@
     <footer></footer>
     
 </body>
-
 <script>
+    AOS.init();
+</script>
+<script>
+
     const LG = document.getElementById("LOGO");
     const PHO = document.getElementById("PHOTO");
     const pic_LG = document.getElementById("PIC1");
