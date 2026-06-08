@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Project3-天氣狀態</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="daybox">
+  <label>
+    <input id="switch_night" type="checkbox"/>
+    <div class="top">
+      <div class="moon"></div>
+      <div class="cloud">
+        <div class="rain"></div>
+        <div class="rain rain2"></div>
+        <div class="rain rain3"></div>
+      </div>
+      <svg class="temsvg">
+        <circle cx="0" cy="50" r="3"></circle>
+        <text x="0" y="50">26°C</text>
+        <circle cx="70" cy="70" r="3"></circle>
+        <text x="70" y="70">24°C</text>
+        <circle cx="140" cy="70" r="3"></circle>
+        <text x="140" y="70">24°C</text>
+        <circle cx="210" cy="70" r="3"></circle>
+        <text x="210" y="70">24°C</text>
+        <circle cx="280" cy="60" r="3"></circle>
+        <text x="280" y="60">25°C</text>
+        <circle cx="350" cy="60" r="3"></circle>
+        <text x="350" y="60">25°C</text>
+        <circle cx="420" cy="40" r="3"></circle>
+        <text x="420" y="40">27°C</text>
+        <circle cx="490" cy="20" r="3"></circle>
+        <text x="490" y="20">29°C</text>
+        <polyline points="0,50 70,70 140,70 210,70 280,60 350,60 420,40"></polyline>
+      </svg>
+      <div class="text_area">
+        <div class="temperature">26°C </div>
+        <div class="infos">
+          <div class="address">台北市大安區學府里</div>
+          <div class="time">星期五 下午2:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="dayweather">
+        <h3>MON</h3>
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun" cx="0" cy="0" r="20"></circle>
+        </svg>
+      </div>
+      <div class="dayweather">
+        <h3>TUE</h3>
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun" cx="0" cy="0" r="20"></circle>
+          <circle class="cloud" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-15" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-25" cy="10" r="15"></circle>
+          <circle class="cloud" cx="-7" cy="15" r="15"></circle>
+        </svg>
+      </div>
+      <div class="dayweather">
+        <h3>WED</h3>
+        <svg viewbox="-65 -25 100 100">
+          <line class="rain" x1="-25" y1="15" x2="-25" y2="35"></line>
+          <line class="rain" x1="-15" y1="10" x2="-15" y2="30"></line>
+          <line class="rain" x1="-5" y1="25" x2="-5" y2="45"></line>
+          <circle class="cloud" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-15" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-25" cy="10" r="15"></circle>
+          <circle class="cloud" cx="-7" cy="15" r="15"></circle>
+        </svg>
+      </div>
+      <div class="dayweather">
+        <h3>THU</h3>
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun" cx="0" cy="0" r="20"></circle>
+          <circle class="cloud" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-15" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-25" cy="10" r="15"></circle>
+          <circle class="cloud" cx="-7" cy="15" r="15"></circle>
+        </svg>
+      </div>
+      <div class="dayweather">
+        <h3>FRI</h3>
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun" cx="0" cy="0" r="20"></circle>
+        </svg>
+      </div>
+      <div class="dayweather">
+        <h3>SAT</h3>
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun" cx="0" cy="0" r="20"></circle>
+        </svg>
+      </div>
+      <div class="dayweather">
+        <h3>SUN</h3>
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun" cx="0" cy="0" r="20"></circle>
+        </svg>
+      </div>
+    </div>
+  </label>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
